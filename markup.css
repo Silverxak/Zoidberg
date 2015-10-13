@@ -1,9 +1,3 @@
 .zoidberg-cards-icon{
-	background: url('ico_cards.png');
-	display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    vertical-align: bottom;
-    opacity: 0.3;
+	background-image: url('https://raw.githubusercontent.com/Silverxak/Zoidberg/master/ico_cards.png');
 }
