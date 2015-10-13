@@ -1,23 +1,31 @@
 {
     "manifest_version": 2,
 
-    "name": "ChoromeExt",
+    "name": "Dr.Zoidberg",
     "version": "1.0",
 
     "icons": {
-		// "16": "16x16.png",
-        // "32": "32x32.png",
-        "48": "48x48.png"
-        // "128": "128x128.png"
+		"16": "logo/16x16.png",
+        "32": "logo/32x32.png",
+        "48": "logo/48x48.png",
+        "128": "logo/128x128.png"
     },
 
         "permissions": [
-             "http://store.steampowered.com/"
+             "http://store.steampowered.com/",
+             "tabs",
+             "notifications"
         ],
+
+        "content_scripts": [{
+            "matches": ["*://store.steampowered.com/*"],
+            "js": ["app.js"],
+            "css": ["markup.css"]
+        }],
 
     "browser_action": {
         "default_title": "Dr. Zoidberg",
-        "default_icon": "48x48.png"
+        "default_icon": "logo/48x48.png"
         // "default_popup": "popup.html"
     }
 }
