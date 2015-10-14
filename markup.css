@@ -1,3 +1,7 @@
 .zoidberg-cards-icon{
 	background-image: url('http://i66.fastpic.ru/big/2015/1014/68/0c08854d1be139b3c4981d53d8edd568.png');
 }
+
+.link-to-card{
+	z-index: 100;
+}
