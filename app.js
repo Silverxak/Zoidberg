@@ -1,4 +1,4 @@
-$(document).ready(function(){
+//$(document).ready(function(){
 
 	$('.tab_item_top_tags').each(function(){
 		var parser = $(this).parents('.tab_item_content').children('.tab_item_name').text();
@@ -6,6 +6,10 @@ $(document).ready(function(){
 		var regExp2 = /.+/;
 		var URL = encodeURIComponent((regExp.test(parser)) ? regExp.exec(parser) : regExp2.exec(parser));
 		$(this).before('<a target="_blank" class="link-to-card" href="http://steamcommunity.com/market/search?q=' + URL + '#p1_quantity_desc"><span class="platform_img zoidberg-cards-icon"></span></a>');
+	});
+
+	$('.link-to-card').each(function(){
+		$(this).after('<a target="_blank" class="link-to-steamdb" href="https://steamdb.info/app/' + $(this).parents('.tab_item').attr('data-ds-appid') + '/graphs/"><span class="platform_img steamdb-icon"></span></a>');
 	});
 
 	$('.tab_item_cap').each(function(){
@@ -18,5 +22,4 @@ $(document).ready(function(){
 	});
 
 
-
-});
+//});

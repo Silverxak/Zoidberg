@@ -2,6 +2,11 @@
 	background-image: url('http://i66.fastpic.ru/big/2015/1014/68/0c08854d1be139b3c4981d53d8edd568.png');
 }
 
+.steamdb-icon{
+	background-image: url('http://i57.fastpic.ru/big/2015/1016/45/0906fc8a1425630804647ad80b1ff545.png');
+	margin-left: 3px;
+}
+
 .link-to-card{
 	z-index: 100;
 }
