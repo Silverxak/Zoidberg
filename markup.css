@@ -1,5 +1,5 @@
 .zoidberg-cards-icon{
-	background-image: url('http://i66.fastpic.ru/big/2015/1014/68/0c08854d1be139b3c4981d53d8edd568.png');
+	background-image: url('https://raw.githubusercontent.com/Silverxak/Zoidberg/master/cards.png');
 }
 
 .steamdb-icon{
@@ -9,4 +9,35 @@
 
 .link-to-card{
 	z-index: 100;
+}
+
+.left_menu{
+	position: fixed;
+	display: none;
+	width: 95px;
+	height: 100%;
+	z-index: 777;
+	cursor: pointer;
+}
+
+.gomarket{
+	background-color: #171a21;
+	width: 95px;
+	height: 50%;
+	opacity: 0.3;
+}
+
+.goup{
+	background-color: #171a21;
+	width: 95px;
+	height: 50%;
+	opacity: 0.3;
+}
+
+.gomarket:hover{
+	opacity: 0.7;
+}
+
+.goup:hover{
+	opacity: 0.7;
 }

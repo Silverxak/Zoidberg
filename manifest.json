@@ -13,12 +13,13 @@
 
         "permissions": [
              "http://store.steampowered.com/",
+             "http://steamcommunity.com/",
              "tabs",
              "notifications"
         ],
 
         "content_scripts": [{
-            "matches": ["*://store.steampowered.com/*"],
+            "matches": ["*://store.steampowered.com/*", "*://steamcommunity.com/*"],
             "js": ["jquery-1.11.3.min.js", "app.js"],
             "css": ["markup.css"]
         }],
