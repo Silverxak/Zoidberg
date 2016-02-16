@@ -28,3 +28,37 @@ $('.responsive_page').each(function(){
 
 
 //});
+
+$('td:contains("продажа товара") ~ td.row_underline:not(:has("a"))').each(function(){
+	$(this).append('<a href="http://google.com"></a>')
+	.append('<img src="http://www.adsit.org/images/mail2.png" width="16" height="16" border="0">')
+})
+
+$('td:contains("продажа товара") + td > div > a').attr('href')
+
+var url = $('td:contains("продажа товара") + td > div > a').attr('href')
+$.get(url).success(function(msg) { if(/"не просмотрено"/.test(msg)) alrt('all good'); })
+
+\d+(?!id_i)
+
+var urlString = $('td:contains("продажа товара") + td > div > a').attr('href')
+var url = /\d+(?!id_i)/.exec(urlString)
+$.get('ajax.asp', {action: 'debates', id_i: url, dataType: 'json'}).success(function(e){ if(/не просмотрено/.test((e.html).toString())) alert('all good')})
+
+// function get_Debates() {
+//     $.ajax('ajax.asp?action=debates&id_i=41446628&rnd=' + Math.random(), {
+//         method: 'GET',
+//         success: function (res) {
+//             $("#debates_content").html(res.html);
+//             $('html, body').animate({
+//                 scrollTop: $("#debates_bottom").offset().top
+//             }, 500);
+//         }
+//     })
+// }
+
+$('td:contains("продажа товара")').each(function(){
+	var urlString = $('td:contains("продажа товара") + td > div > a').attr('href')
+	var url = /\d+(?!id_i)/.exec(urlString)
+	$.get('ajax.asp', {action: 'debates', id_i: url, dataType: 'json'}).success(function(e){ if(/не просмотрено/.test((e.html).toString())) alert('all good')})	
+});
