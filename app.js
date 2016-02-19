@@ -54,9 +54,10 @@ $('td:contains("продажа товара") + td > div > a').each(function(){
 	var url = /\d+(?!id_i)/.exec($(this).attr('href'));
 	var gname = /.+(?=\()/.exec($(this).text());
 	var ltr = 'Спасибо что воспользовались нашими услугами, и приобрели игру ' + gname[0] + ', если вам не сложно оставьте отзыв о нас - тем самым вы сделаете нас лучше, а наши цены еще ниже, заранее спасибо';
+	var rgx = new RegExp(ltr, 'i');
 	$.get('ajax.asp', {action: 'debates', id_i: url[0], dataType: 'json'})
 	.success(function(e){ 
-		if(!/не просмотрено/.test((e.html).toString())) 
+		if((!/не просмотрено/.test((e.html).toString())) || rgx.test((e.html).toString())) 
 			smailer(url[0], ltr)
 	})
 });
